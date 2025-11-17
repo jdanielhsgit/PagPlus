@@ -1,36 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Head igual -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | PAG Solutions MX</title>
-    <!-- Links -->
+    <meta name="description" content="Contáctanos para cotizaciones, soporte técnico o desarrollo de software. Nuevo Laredo, Tamaulipas.">
+
+    <!-- Bootstrap 5 + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar (active en Contacto) -->
-    <!-- Hero: <h1>Contáctanos</h1> <p>Estamos listos para ayudarte.</p> -->
 
+    <!-- Navbar (Contacto activo) -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-laptop"></i> PAG Solutions MX
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="servicios.html" role="button" data-bs-toggle="dropdown">Servicios</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="servicios.html#mantenimiento">Mantenimiento y Soporte Técnico</a></li>
+                            <li><a class="dropdown-item" href="servicios.html#sistemas">Sistemas y Páginas Web</a></li>
+                            <!-- ... resto del submenú ... -->
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="software.html">Software</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Contacto -->
+    <section class="hero-section position-relative">
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex align-items-center">
+            <div class="hero-content text-center text-white">
+                <h1 class="display-3 fw-bold">¿Listo para empezar?</h1>
+                <p class="lead mb-4">Cuéntanos tu proyecto y te respondemos en menos de 2 horas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario + Mapa -->
     <section class="section-padding bg-light-alt">
         <div class="container">
-            <h2 class="section-title text-center">Envíanos un Mensaje</h2>
-            <div class="row">
+            <div class="row g-5">
+                <!-- Formulario -->
                 <div class="col-lg-6 animate__fadeIn">
-                    <form>
-                        <div class="mb-3"><input type="text" class="form-control" placeholder="Nombre" required></div>
-                        <div class="mb-3"><input type="email" class="form-control" placeholder="Email" required></div>
-                        <div class="mb-3"><textarea class="form-control" rows="5" placeholder="Mensaje"></textarea></div>
-                        <button type="submit" class="btn btn-primary-custom">Enviar</button>
+                    <h2 class="section-title text-center mb-5">Envíanos un Mensaje</h2>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control form-control-lg" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control form-control-lg" placeholder="Teléfono (opcional)">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control form-control-lg" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary-custom btn-lg px-5">
+                                Enviar Mensaje
+                            </button>
+                        </div>
                     </form>
                 </div>
+
+                <!-- Información de contacto + Mapa -->
                 <div class="col-lg-6 animate__fadeIn">
-                    <div class="ratio ratio-16x9 rounded shadow">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.103444378888!2d-100.389889685037!3d25.686614883632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662e51e5e8379b9%3A0x874b7b0fa451e3c!2sMonterrey%2C%20Nuevo%20Le%C3%B3n!5e0!3m2!1ses!2smx!4v1731800000000" allowfullscreen="" loading="lazy"></iframe>
+                    <h2 class="section-title text-center mb-5">Encuéntranos</h2>
+                    
+                    <div class="service-card p-4 mb-4 text-center">
+                        <i class="bi bi-geo-alt-fill display-1 text-accent mb-3"></i>
+                        <p class="lead mb-1">Nuevo Laredo, Tamaulipas</p>
+                        <small class="text-muted">Atendemos todo México y sur de USA</small>
                     </div>
-                    <p class="mt-3 lead">Tel: 867 223 69 53 | Email: info@pagsolutionsmx.com</p>
+
+                    <div class="row g-3 mb-4 text-center">
+                        <div class="col-6">
+                            <div class="service-card p-3">
+                                <i class="bi bi-telephone-forward display-4 text-accent"></i>
+                                <p class="mt-2 fw-bold">867 223 69 53</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="service-card p-3">
+                                <i class="bi bi-envelope display-4 text-accent"></i>
+                                <p class="mt-2 fw-bold">info@pagsolutionsmx.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="ratio ratio-16x9 rounded shadow overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.9458!2d-99.529!3d27.492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866125b4f07d9e7d%3A0x4e97e0b5b8f8b8f8!2sNuevo%20Laredo%2C%20Tamps.!5e0!3m2!1ses-419!2smx!4v1731800000000" 
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">© 2025 PAG Solutions MX | Tel: 867 223 69 53 | Nuevo Laredo, Tamaulipas</p>
+            <p><a href="index.html" class="text-white">Inicio</a> | <a href="contacto.html" class="text-white">Contacto</a></p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/528672236953?text=¡Hola!%20Me%20interesa%20sus%20servicios%20de%20TI" 
+       class="btn-whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Script del formulario (muestra alerta bonita) -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Mensaje enviado con éxito! 🎉\nTe contactaremos en menos de 2 horas.');
+            this.reset();
+        });
+    </script>
+
+    <!-- Estilo del botón WhatsApp flotante (agrega al final de styles.css si no lo tienes) -->
+    <style>
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+            background: #128C7E;
+        }
+    </style>
 </body>
 </html>
