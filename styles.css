@@ -85,4 +85,33 @@ h1, h2, h3 { font-family: 'Oswald', sans-serif; }
     color: var(--accent) !important;
     font-weight: bold;
     margin-right: 12px;
+
+}
+
+/* === MEJORA DE CONTRASTE EN TODAS LAS TARJETAS DE SERVICIO === */
+.service-card h4,
+.service-card p {
+    color: #1a1a1a !important;     /* Texto casi negro para máximo contraste */
+}
+
+.service-card h4 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2d2d2d !important;     /* Un poquito más suave que el título pero 100% legible */
+}
+
+/* Los íconos y checks siguen con el color bonito cian */
+.service-card i {
+    color: var(--accent) !important;
+}
+
+.service-card .bi-check,
+.service-card .text-accent {
+    color: var(--accent) !important;
 }
