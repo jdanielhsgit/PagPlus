@@ -85,8 +85,8 @@ h1, h2, h3 { font-family: 'Oswald', sans-serif; }
     color: var(--accent) !important;
     font-weight: bold;
     margin-right: 12px;
-
 }
+
 
 /* === MEJORA DE CONTRASTE EN TODAS LAS TARJETAS DE SERVICIO === */
 .service-card h4,
