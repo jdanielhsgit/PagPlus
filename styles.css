@@ -20,10 +20,12 @@ h1, h2, h3 { font-family: 'Oswald', sans-serif; }
 .navbar.scrolled { background: rgba(13, 71, 161, 1) !important; }
 .navbar-brand { font-weight: 700; color: var(--white) !important; }
 .nav-link { color: var(--white) !important; font-weight: 600; position: relative; }
+
+/**/
 .nav-link::after {
     content: ''; position: absolute; width: 0; height: 3px; bottom: 0; left: 50%;
     background: var(--accent); transition: all 0.3s; transform: translateX(-50%);
-}
+} 
 .nav-link:hover::after { width: 70%; }
 
 /* Hero común */
@@ -38,6 +40,7 @@ h1, h2, h3 { font-family: 'Oswald', sans-serif; }
 .section-title {
     font-size: 3rem; color: var(--primary); position: relative; display: inline-block; padding-bottom: 15px; margin-bottom: 40px;
 }
+/**/
 .section-title::after {
     content: ''; position: absolute; width: 80px; height: 5px; background: var(--accent); bottom: 0; left: 50%; transform: translateX(-50%);
 }
@@ -53,6 +56,7 @@ h1, h2, h3 { font-family: 'Oswald', sans-serif; }
 .service-card i { font-size: 3rem; color: var(--accent); margin-bottom: 20px; }
 
 /* Submenú en servicios (estilo dropdown simple) */
+/**/
 .dropdown-menu { background: var(--primary); border: none; }
 .dropdown-item { color: var(--white); }
 .dropdown-item:hover { background: var(--secondary); }
